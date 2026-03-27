@@ -1,183 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Program Dashboard</title>
+  <title>Child Health Monitoring Program</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      background: linear-gradient(135deg, #0f172a, #052e2b);
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
+    :root {
+      --blue: #3b82f6;
+      --green: #22c55e;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #f6f9fc;
     }
 
-    .container {
-      max-width: 1050px;
-      margin: auto;
-      padding: 60px 20px;
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
     /* HEADER */
-    .badge {
-      display: inline-block;
-      background: #0f766e;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: bold;
-      color: #d1fae5;
-      margin-bottom: 20px;
+    .maintenance {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .logo img {
+      height: 48px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 70px 20px 30px;
+      max-width: 900px;
+      margin: auto;
     }
 
     h1 {
-      font-size: 46px;
-      margin-bottom: 10px;
-      font-weight: 900;
-      color: #e0f2fe;
+      font-size: 44px;
+      margin-bottom: 12px;
+      font-weight: 700;
     }
 
-    p.subtitle {
+    .subtitle {
       font-size: 18px;
-      color: #cbd5e1;
-      margin-bottom: 40px;
+      color: var(--muted);
+      margin-bottom: 25px;
     }
 
-    /* BUTTONS */
     .buttons {
       display: flex;
-      gap: 15px;
+      justify-content: center;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     .btn {
-      padding: 12px 18px;
+      padding: 12px 22px;
       border-radius: 10px;
-      font-weight: bold;
       text-decoration: none;
-      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s;
     }
 
     .btn-primary {
-      background: #22c55e;
-      color: #052e2b;
-    }
-
-    .btn-primary:hover {
-      background: #16a34a;
-    }
-
-    .btn-secondary {
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
-      background: transparent;
-    }
-
-    .btn-secondary:hover {
-      background: #0c4a6e;
+      background: var(--blue);
       color: white;
     }
 
+    .btn-secondary {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    /* SECTIONS */
+    .announcement {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      border-left: 6px solid var(--green);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .section-title {
+      max-width: 1000px;
+      margin: 40px auto 20px;
+      font-size: 26px;
+      font-weight: 700;
+      color: #0f172a;
+      padding: 0 20px;
+    }
+
     /* GRID */
-    .grid {
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px 70px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
 
     /* CARD */
     .card {
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: white;
       padding: 22px;
       border-radius: 14px;
-      text-align: left;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--blue);
     }
 
-    .card h2 {
-      font-size: 20px;
-      font-weight: 900;
-      margin-bottom: 12px;
-      color: #38bdf8;
+    .card.green {
+      border-top: 4px solid var(--green);
     }
 
     .card h3 {
-      font-size: 15px;
-      margin: 12px 0 6px;
-      color: #34d399;
+      margin-top: 0;
+      font-size: 18px;
     }
 
     .card p {
-      font-size: 14px;
+      color: var(--muted);
       line-height: 1.6;
-      color: #cbd5e1;
-      margin: 0;
+      font-size: 14px;
     }
 
     hr {
       border: none;
-      border-top: 1px solid #334155;
-      margin: 14px 0;
+      border-top: 1px solid #e5e7eb;
+      margin: 12px 0;
     }
 
-    .section-title {
-      font-size: 28px;
-      margin: 50px 0 20px;
-      font-weight: 900;
-      color: #a7f3d0;
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 13px;
+      color: var(--muted);
     }
 
+    @media (max-width: 600px) {
+      h1 { font-size: 32px; }
+    }
   </style>
 </head>
 
 <body>
 
-<div class="container">
-
-  <!-- HEADER SECTION (YOUR ORIGINAL TOP PAGE) -->
-  <div class="badge">🚀 Parent & Student Dashboard</div>
-
-  <h1>Welcome to the Rewards Program</h1>
-
-  <p class="subtitle">
-    Track participation, earn rewards, and celebrate student success.
-  </p>
-
-  <div class="buttons">
-    <a href="#" class="btn btn-primary">Get Started</a>
-    <a href="#" class="btn btn-secondary">Learn More</a>
+  <!-- HEADER -->
+  <div class="maintenance">
+    ⚠️ Child Health Monitoring Program — Supporting families in real time
   </div>
 
-  <!-- FEATURES (FROM YOUR ORIGINAL PAGE) -->
-  <div class="grid">
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Child Health Monitoring Program</h1>
+
+    <div class="subtitle">
+      Helping families stay informed, supported, and connected — in real time.
+    </div>
+
+    <div class="buttons">
+      <a href="#" class="btn btn-primary">Learn More</a>
+      <a href="#" class="btn btn-secondary">Get Updates</a>
+    </div>
+  </div>
+
+  <!-- UPDATES -->
+  <div class="announcement">
+    <h3>📢 Latest Updates</h3>
+    <p><strong>System Update:</strong> We are improving tracking accuracy and dashboard performance.</p>
+    <p><strong>Coming Soon:</strong> New caregiver tools and simplified reporting features.</p>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="section">
 
     <div class="card">
-      <h2>📘 Feature One</h2>
-      <p>Explain a key benefit or service here in a simple way.</p>
+      <h3>📊 Smart Health Tracking</h3>
+      <p>Monitor key health indicators with clarity and confidence.</p>
+    </div>
+
+    <div class="card green">
+      <h3>🤝 Family Connected Care</h3>
+      <p>Keep parents, caregivers, and providers aligned in one system.</p>
     </div>
 
     <div class="card">
-      <h2>📊 Feature Two</h2>
-      <p>Track progress and participation in real time.</p>
-    </div>
-
-    <div class="card">
-      <h2>🎯 Feature Three</h2>
-      <p>Encourage consistent participation and improvement.</p>
+      <h3>🔒 Safe & Secure</h3>
+      <p>Built with privacy-first architecture and strong data protection.</p>
     </div>
 
   </div>
 
   <!-- REWARDS SECTION -->
-  <div class="section-title">🎁 Rewards System</div>
+  <div class="section-title">🎁 Rewards & Monthly Raffle</div>
 
-  <div class="grid">
+  <div class="section">
 
     <div class="card">
-      <h2>🏆 Monthly Raffle</h2>
+      <h3>🏆 Monthly Raffle</h3>
 
       <p>
         Any child with 90% participation will be entered into our monthly raffle.
@@ -186,17 +238,17 @@
 
       <hr>
 
-      <h3>February Winners</h3>
-
       <p>
+        <strong>February Winners</strong><br><br>
+
         <b>$10 Gift Cards:</b><br>
         Ava S. • Liam K. • Noah R. • Emma T. • Sophia B. • Chaim Z. • Dovid B. • Shevy F. • Rivkah D. • Yael K. • Leora V. • Zevy N. • Yoily T. • Yenty P.<br><br>
 
         <b>$50 Gift Cards:</b><br>
-        Chaim A. • Jordan B. • Madison C. • Daniel S. • Rachel T. • Isaac M. • Leah P. • Yosef K. • Sara B. • David F. • Miriam L. • Avi N. • Tova R. • Eli Z. • Rivka S. • Jonah P. • Esther K. • Noah D. • Hannah M. • Shmuel T.<br><br>
+        Chaim A. • Jordan B. • Madison C. • Daniel S. • Rachel T. • Isaac M. • Leah P. • Yosef K. • Sara B. • David F. • Miriam L. • Avi N. • Tova R. • Eli Z. • Rivka S.<br><br>
 
         <b>Board Games:</b><br>
-        Sima A. • Noah B. • Ava C. • Leah D. • David E. • Rachel F. • Moshe G. • Talia H. • Jacob I. • Esther J. • Ben K. • Dina L. • Eli M. • Sara N. • Yoni O. • Miriam P. • Aaron Q. • Noa R. • Shira S. • Chana T.<br><br>
+        Sima A. • Noah B. • Ava C. • Leah D. • David E. • Rachel F. • Moshe G. • Talia H. • Jacob I. • Esther J. • Ben K. • Dina L. • Eli M. • Sara N. • Yoni O.<br><br>
 
         <b>LEGO:</b><br>
         Ethan A. • Sophia B. • Benjamin C. • Ava D. • Noah E. • Leah F. • David G. • Rachel H. • Moshe I. • Talia J. • Jacob K. • Esther L. • Ben M. • Dina N. • Eli O.<br><br>
@@ -208,29 +260,10 @@
 
   </div>
 
-  <!-- PARTICIPATION REWARDS -->
-  <div class="section-title">⭐ Participation Rewards</div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h2>Keep Up the Good Work</h2>
-
-      <p>
-        Keep up the good work, kids — to date we've given away over thousands in rewards.
-      </p>
-
-      <hr>
-
-      <p>
-        Anyone who has just started following their guidelines may ask their Hospital of CARE provider
-        to apply for the <b>$50 Beginner’s Bonus</b>. Please ensure all paperwork is submitted in a timely manner.
-      </p>
-    </div>
-
-  </div>
-
-</div>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Child Health Monitoring Program • Built for families and care teams
+  </footer>
 
 </body>
 </html>
