@@ -3,132 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Participation & Rewards Portal</title>
+  <title>Rewards Program</title>
 
   <style>
-    :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --border: #e2e8f0;
-      --accent: #1d4ed8;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    /* TOP BAR */
-    .topbar {
       background: #0f172a;
       color: white;
-      padding: 14px 20px;
-      font-size: 14px;
-      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* MAIN WRAPPER */
     .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 30px 16px 60px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
     }
 
     /* HEADER */
-    .header {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px;
+    .badge {
+      display: inline-block;
+      background: #1e293b;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: #93c5fd;
+      font-weight: bold;
       margin-bottom: 20px;
     }
 
-    .header h1 {
-      margin: 0;
-      font-size: 30px;
-      font-weight: 900;
+    h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+      font-weight: 800;
     }
 
-    .header p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.6;
+    p.subtitle {
+      font-size: 18px;
+      color: #cbd5e1;
+      margin-bottom: 40px;
     }
 
     /* GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
 
     /* CARD */
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
+      background: #1e293b;
+      padding: 22px;
       border-radius: 14px;
-      padding: 20px;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 800;
-      color: var(--accent);
-      background: rgba(29,78,216,0.08);
-      padding: 5px 10px;
-      border-radius: 999px;
-      margin-bottom: 10px;
-      letter-spacing: 0.5px;
+      text-align: left;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
     .card h2 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      font-weight: 900;
+      font-size: 20px;
+      margin-bottom: 12px;
+      font-weight: 800;
     }
 
     .card h3 {
-      margin: 14px 0 8px;
-      font-size: 15px;
-      font-weight: 800;
+      margin: 14px 0 6px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #93c5fd;
     }
 
     .card p {
       font-size: 14px;
-      line-height: 1.7;
-      margin: 10px 0;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin: 0;
     }
 
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 14px 0;
+    .section-title {
+      font-size: 28px;
+      margin: 40px 0 20px;
+      font-weight: 800;
     }
 
-    b {
-      font-weight: 900;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    /* FOOTER */
-    .footer {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 12px;
-      color: var(--muted);
+    hr {
+      border: none;
+      border-top: 1px solid #334155;
+      margin: 15px 0;
     }
 
   </style>
@@ -136,89 +96,72 @@
 
 <body>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    Official Participation & Rewards System
-  </div>
-
   <div class="container">
 
     <!-- HEADER -->
-    <div class="header">
-      <h1>Participation & Rewards Portal</h1>
-      <p>
-        This system tracks participation levels, rewards distribution, and monthly incentive programs.
-      </p>
-    </div>
+    <div class="badge">🎁 Rewards Program</div>
 
-    <!-- MAIN GRID -->
+    <h1>Participation & Rewards Dashboard</h1>
+
+    <p class="subtitle">
+      Encouraging consistency, growth, and positive participation.
+    </p>
+
+    <!-- MONTHLY RAFFLE -->
     <div class="grid">
 
-      <!-- MONTHLY RAFFLE -->
       <div class="card">
-        <div class="badge">MONTHLY RAFFLE PROGRAM</div>
-        <h2>🎁 Monthly Raffle</h2>
+        <h2>🏆 Monthly Raffle</h2>
 
         <p>
-          Students with <b>90% or higher participation</b> are automatically entered into the monthly raffle.
-          Drawings take place on the <b>last day of every month</b>.
+          Any child with 90% participation will be entered into our monthly raffle.
+          The raffle is held on the last day of every month.
         </p>
 
-        <div class="divider"></div>
+        <hr>
 
-        <h3>🏆 February Winners</h3>
+        <h3>February Winners</h3>
 
         <p>
           <b>$10 Gift Cards:</b><br>
-          Ava S. • Liam K. • Noah R. • Emma T. • Sophia B.
-        </p>
+          Ava S. • Liam K. • Noah R. • Emma T. • Sophia B. • Chaim Z. • Dovid B. • Shevy F. • Rivkah D. • Yael K. • Leora V. • Zevy N. • Yoily T. • Yenty P. • Sarah M. • David L. • Michael R. • Leah G. • Moshe P. • Talia S. • Jacob N. • Esther B. • Ben K. • Dina F. • Rachel S. • Eli T. • Miriam P. • Aaron D. • Noa V. • Shira K.<br><br>
 
-        <p>
           <b>$50 Gift Cards:</b><br>
-          Chaim A. • Jordan B. • Madison C.
-        </p>
+          Chaim A. • Jordan B. • Madison C. • Daniel S. • Rachel T. • Isaac M. • Leah P. • Yosef K. • Sara B. • David F. • Miriam L. • Avi N. • Tova R. • Eli Z. • Rivka S. • Jonah P. • Esther K. • Noah D. • Hannah M. • Shmuel T.<br><br>
 
-        <p>
           <b>Board Games:</b><br>
-          Sima A. • Noah B. • Ava C.
-        </p>
+          Sima A. • Noah B. • Ava C. • Leah D. • David E. • Rachel F. • Moshe G. • Talia H. • Jacob I. • Esther J. • Ben K. • Dina L. • Eli M. • Sara N. • Yoni O. • Miriam P. • Aaron Q. • Noa R. • Shira S. • Chana T.<br><br>
 
-        <p>
-          <b>LEGO Sets:</b><br>
-          Ethan A. • Sophia B. • Benjamin C.
-        </p>
+          <b>LEGO:</b><br>
+          Ethan A. • Sophia B. • Benjamin C. • Ava D. • Noah E. • Leah F. • David G. • Rachel H. • Moshe I. • Talia J. • Jacob K. • Esther L. • Ben M. • Dina N. • Eli O.<br><br>
 
-        <p>
-          <b>Tickets:</b><br>
-          Chava A. • Mason B. • Emily C.
-        </p>
-      </div>
-
-      <!-- PARTICIPATION REWARDS -->
-      <div class="card">
-        <div class="badge">INCENTIVE PROGRAM</div>
-        <h2>🎉 Participation Rewards</h2>
-
-        <p>
-          Keep up the good work, kids — to date, we have distributed <b>thousands of dollars</b> in rewards
-          through structured participation incentives.
-        </p>
-
-        <p>
-          Participants who have recently begun following program guidelines may request that their
-          <b>Hospital of CARE provider</b> apply for a <b>$50 beginner’s bonus</b>.
-        </p>
-
-        <p class="muted">
-          All required documentation must be submitted in a timely manner to ensure eligibility.
+          <b>Water Park Tickets:</b><br>
+          Chava A. • Mason B. • Emily C. • Jonah D. • Sara E.
         </p>
       </div>
 
     </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-      © Participation Rewards System
+    <!-- PARTICIPATION REWARDS -->
+    <div class="section-title">Participation Rewards</div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>⭐ Keep Up the Good Work</h2>
+
+        <p>
+          Keep up the good work, kids — to date we've given away over thousands in rewards.
+        </p>
+
+        <hr>
+
+        <p>
+          Anyone who has just started following their guidelines may ask their Hospital of CARE provider
+          to apply for the <b>$50 Beginner’s Bonus</b>. Please ensure all paperwork is submitted in a timely manner.
+        </p>
+      </div>
+
     </div>
 
   </div>
