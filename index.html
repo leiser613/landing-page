@@ -7,11 +7,11 @@
 
   <style>
     :root {
-      --bg: #f6f8fb;
+      --bg: #f5f7fb;
       --card: #ffffff;
-      --text: #0b1220;
-      --muted: #5b6472;
-      --border: #dfe5ee;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
       --accent: #1d4ed8;
     }
 
@@ -21,15 +21,25 @@
 
     body {
       margin: 0;
-      font-family: "Arial", sans-serif;
+      font-family: Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
     }
 
+    /* TOP BAR */
+    .topbar {
+      background: #0f172a;
+      color: white;
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* MAIN WRAPPER */
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 40px 18px;
+      padding: 30px 16px 60px;
     }
 
     /* HEADER */
@@ -38,21 +48,20 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 22px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .header h1 {
       margin: 0;
       font-size: 30px;
       font-weight: 900;
-      letter-spacing: -0.5px;
     }
 
     .header p {
       margin: 8px 0 0;
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.5;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     /* GRID */
@@ -67,18 +76,18 @@
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 22px;
+      padding: 20px;
     }
 
     .badge {
       display: inline-block;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--accent);
       background: rgba(29,78,216,0.08);
-      padding: 6px 10px;
+      padding: 5px 10px;
       border-radius: 999px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       letter-spacing: 0.5px;
     }
 
@@ -89,30 +98,37 @@
     }
 
     .card h3 {
-      margin: 16px 0 8px;
+      margin: 14px 0 8px;
       font-size: 15px;
       font-weight: 800;
     }
 
     .card p {
-      margin: 10px 0;
       font-size: 14px;
       line-height: 1.7;
-      color: var(--text);
+      margin: 10px 0;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 14px 0;
+    }
+
+    b {
+      font-weight: 900;
     }
 
     .muted {
       color: var(--muted);
     }
 
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 16px 0;
-    }
-
-    b {
-      font-weight: 900;
+    /* FOOTER */
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
     }
 
   </style>
@@ -120,16 +136,22 @@
 
 <body>
 
+  <!-- TOP BAR -->
+  <div class="topbar">
+    Official Participation & Rewards System
+  </div>
+
   <div class="container">
 
     <!-- HEADER -->
     <div class="header">
       <h1>Participation & Rewards Portal</h1>
       <p>
-        Official tracking system for participation rewards, incentives, and monthly recognition programs.
+        This system tracks participation levels, rewards distribution, and monthly incentive programs.
       </p>
     </div>
 
+    <!-- MAIN GRID -->
     <div class="grid">
 
       <!-- MONTHLY RAFFLE -->
@@ -139,7 +161,7 @@
 
         <p>
           Students with <b>90% or higher participation</b> are automatically entered into the monthly raffle.
-          Drawings occur on the <b>last day of each month</b>.
+          Drawings take place on the <b>last day of every month</b>.
         </p>
 
         <div class="divider"></div>
@@ -170,7 +192,6 @@
           <b>Tickets:</b><br>
           Chava A. • Mason B. • Emily C.
         </p>
-
       </div>
 
       <!-- PARTICIPATION REWARDS -->
@@ -180,7 +201,7 @@
 
         <p>
           Keep up the good work, kids — to date, we have distributed <b>thousands of dollars</b> in rewards
-          through participation-based incentives.
+          through structured participation incentives.
         </p>
 
         <p>
@@ -191,9 +212,13 @@
         <p class="muted">
           All required documentation must be submitted in a timely manner to ensure eligibility.
         </p>
-
       </div>
 
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      © Participation Rewards System
     </div>
 
   </div>
